@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount calculator</title>
+</head>
+<style>
+  body{
+    text-align: center;
+    font-family: monospace;
+    background-color: cornflowerblue;
+   
+  }
+  form {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid lime;
+  box-shadow: -2px -2px 4px 12px rgb(179, 255, 0);
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+span p{
+  font-size: 16px;
+  font-weight: bold;
+}
+input::placeholder{
+  color: navy;
+  font-style: italic;
+}
+input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid aqua;
+  background-color: transparent;
+}
+
+#total{
+  width: 220px;
+  height: 30px;
+ border: 1px solid aqua;
+  background-color: transparent;
+}
+
+#save{
+  width: 220px;
+  height: 30px;
+ border: 1px solid aqua;
+  background-color: transparent;
+}
+
+span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+</style>
+<body>
+  <h1>Discount and Amount Calculator</h1>
+  <p>1.For goods worth 10,000, discout = 15%</p>
+  <p>2.For goods worth 5,000 - 9,999 discout = 10%</p>
+  <p>3.For goods worth 3,000 - 4,999 discout = 5%</p>
+  <p>4.For goods worth less than 3,000 no discount</p>
+  <form><span>
+    <label for="valueInput">Amount to pay:</label>
+    <input 
+    onchange="executeDiscount()"
+     placeholder="Input Your Amount" type="text" id="amount" /> 
+  </span>
+  <span>
+    <p>Discount / Save:</p>
+    <h2  id="save">Discount:</h2>
+    </span>
+  <span>
+    <p>Total Amount:</p>
+    <h2  id="total">Amount:</h2>
+    </span>
+    
+  </form>
+  <script src="script.js"></script>
+ 
+     
+</body>
+</html>
